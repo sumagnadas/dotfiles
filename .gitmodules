@@ -1,0 +1,3 @@
+[submodule "grub/elden-grub-theme"]
+	path = grub/elden-grub-theme
+	url = https://github.com/sumagnadas/elden-grub-theme
