@@ -1,0 +1,22 @@
+#!/bin/bash
+# To activate ROS2 workspaces using only one command
+# Set ROS_PROJECT_HOME for custom workspace storage folder
+# Might add workspace creation facility 
+if [ -z "${ROS_PROJECT_HOME}" ]; then 
+	ROS_PROJECT_HOME="$HOME/ros-projects"
+fi
+roset(){
+if [ "$#" -ne 1 ]; then
+	echo -e "Usage: roset project_name\n\nAvailable projects:-\n$(find $ROS_PROJECT_HOME -mindepth 1 -maxdepth 1 -type d | xargs -n 1 basename)"
+elif [ -e "$ROS_PROJECT_HOME/$1" ]; then
+{
+	echo $1
+	source $ROS_PROJECT_HOME/$1/install/setup.bash
+	cd $ROS_PROJECT_HOME/$1/
+}
+else
+	echo "$ROS_PROJECT_HOME/$1"
+	echo -e "No such projects."
+fi
+}
+

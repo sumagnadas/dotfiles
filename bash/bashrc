@@ -120,5 +120,15 @@ export WORKON_HOME=/mnt/Extra/pythonprojects/venvs
 export PROJECT_HOME=/mnt/Extra/pythonprojects
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
 export WINEPREFIX=/mnt/Extra/wine_programs
-. "$HOME/.asdf/asdf.sh"
-. "$HOME/.asdf/completions/asdf.bash"
+#. "$HOME/.asdf/asdf.sh"
+#. "$HOME/.asdf/completions/asdf.bash"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH=$PATH:/mnt/Extra/android_sdk/cmdline-tools/latest/bin:/mnt/Extra/android_sdk/emulator
+export ROS_PROJECT_HOME=/mnt/Extra/ros-projects
+source /opt/ros/jazzy/setup.bash
+source /home/sumagnadas/bin/roset
+source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash
