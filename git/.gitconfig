@@ -1,0 +1,6 @@
+[user]
+	name = sumagnadas
+	email = sumagnadas@gmail.com
+[core]
+	compression = 0
+	excludesFile = /home/sumagnadas/.gitignore

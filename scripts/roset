@@ -5,7 +5,7 @@
 if [ -z "${ROS_PROJECT_HOME}" ]; then 
 	ROS_PROJECT_HOME="$HOME/ros-projects"
 fi
-roset(){
+rs(){
 if [ "$#" -ne 1 ]; then
 	echo -e "Usage: roset project_name\n\nAvailable projects:-\n$(find $ROS_PROJECT_HOME -mindepth 1 -maxdepth 1 -type d | xargs -n 1 basename)"
 elif [ -e "$ROS_PROJECT_HOME/$1" ]; then
