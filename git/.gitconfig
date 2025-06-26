@@ -4,3 +4,5 @@
 [core]
 	compression = 0
 	excludesFile = /home/sumagnadas/.gitignore
+[init]
+	defaultBranch = main
